@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    tools {nodejs "node"}
+    tools {nodejs "Node"}
 
     stages {
         stage('Cypress Parallel Test Suite'){
@@ -19,7 +19,8 @@ pipeline {
                         bat 'npm install -D cypress-iframe'
                         bat 'npm install --save-dev @4tw/cypress-drag-drop'
                         bat 'npm install --save-dev chai'
-                        bat 'npx cypress run --record --key 25dae852-ea4f-4c16-9931-8c5fc047e594'
+                        bat 'npm update'
+                        bat 'npx cypress run --record --key 25dae852-ea4f-4c16-9931-8c5fc047e594 --parallel'
                     }
                 }
 
@@ -36,7 +37,8 @@ pipeline {
                         bat 'npm install -D cypress-iframe'
                         bat 'npm install --save-dev @4tw/cypress-drag-drop'
                         bat 'npm install --save-dev chai'
-                        bat 'npx cypress run --record --key 25dae852-ea4f-4c16-9931-8c5fc047e594'
+                        bat 'npm update'
+                        bat 'npx cypress run --record --key 25dae852-ea4f-4c16-9931-8c5fc047e594 --parallel'
                     }
                 }
             }
